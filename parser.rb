@@ -14,9 +14,11 @@ incidents= parsed_items["incidents"]
 p "closing up"
 json_data.close
 
-limit= 3500
 
-
+# If you are rendering, you will probably have to play with these and work in batches unless you have a massive computer
+limit= 4040
+# TODO: this has to match the last record of the set, larger numbers crash
+start_id= 4000
 
 # The walls are:
 # 71.5" (71.5 inches * 300 pixels per inch => 21450.0 pixels)
@@ -27,6 +29,7 @@ limit= 3500
 # 78750 total pixels at 300 ppi
 # 262 inches
 # 71.5 + 119.5 + 71.5
+# 78750 / 144 days = 500px wide columns
 
 if File.exists?(output_file_name)
   p "erase existing file first? Press n to about, any key to continue ..."
@@ -41,8 +44,8 @@ content= File.new(output_file_name, "a")
 prev_id ||= "unset" #for removing dupes
 incidents.each do |i|
   current_id= i["incident"]["incidentid"]
-  if current_id == prev_id || current_id == nil
-    p "skipping duplicate"
+  if current_id == prev_id || current_id == nil || current_id.to_i < start_id
+    p "skipping duplicate, nil, or out of range incident"
   elsif current_id.to_i > limit
     p "done."
     content.close
@@ -54,10 +57,10 @@ incidents.each do |i|
     p "starting to write an incident ..."
     description= i["incident"]["incidentdescription"]
     p description
-    size ||= "col2"
-    if description.length > 1000 
-      size="col4"
-    end 
+    size ||= "col1"
+    # if description.length > 1000 
+    #   size="col4"
+    # end 
     content.write("<div class='box #{size}'>")
     content.write("<div class='title'>")
     content.write(i["incident"]["incidenttitle"])

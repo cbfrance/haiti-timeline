@@ -6,9 +6,9 @@
 body { 
     margin: 0; 
     font: 18px 'Courier', Arial, sans-serif;
-    background: #D8D5D2;
     padding: 20px;
     color: #222;
+    background: #fff;
 }
 
 
@@ -20,7 +20,7 @@ body {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-  width: 1000px;
+  width: 400px;
 }
 
 .wrap:after {
@@ -40,7 +40,8 @@ body {
 .box {
     margin: 5px;
     padding: 5px;
-    -moz-border-radius: 5px;
+/*    background: #D8D5D2;
+*/    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
     font-size: 11px;
@@ -48,12 +49,12 @@ body {
     overflow: hidden;
 }
 
-.col1 { width: 80px; }
-.col2 { width: 180px; }
+.col1 { width: 380px; }
+/*.col2 { width: 180px; }
 .col3 { width: 280px; }
 .col4 { width: 380px; }
 .col5 { width: 480px; }
-
+*/
 .col1 img { max-width: 80px; }
 .col2 img { max-width: 180px; }
 .col3 img { max-width: 280px; }
