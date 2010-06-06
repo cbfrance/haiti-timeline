@@ -42,8 +42,8 @@ content= File.new(output_file_name, "a")
       p "done."
       content.close
       p "catting the files"
-      `cat _header.html _content.html _footer.html > output.html`
-      `open output.html`
+      `cat _header.html _content.html _footer.html > index.html`
+      `open index.html`
       exit
     else
       p "starting to write an incident ..."
