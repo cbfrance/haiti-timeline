@@ -5,22 +5,23 @@
 
 body { 
     margin: 0; 
-    font: 18px 'Courier', Arial, sans-serif;
+    font: 20px 'Helvetica Neue', Arial, sans-serif;
     padding: 20px;
     color: #222;
-    background: #fff;
 }
 
-
+.timestamp {
+  color: #ccc;
+}
 .wrap {
     background: #FFF;
     border: 0px solid #456;
     padding: 10px;
-	margin-bottom: 20px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
-  width: 400px;
+	  margin-bottom: 20px;
+	  -moz-border-radius: 5px;
+	  -webkit-border-radius: 5px;
+	  border-radius: 5px;
+	  width: 21450px;
 }
 
 .wrap:after {
@@ -33,30 +34,30 @@ body {
 
 .title {
   font-weight: bold;
-  font-family: "helvetica neue";
+  font-family: helvetica;
   text-transform: uppercase;
 }
 
 .box {
     margin: 5px;
     padding: 5px;
-/*    background: #D8D5D2;
-*/    -moz-border-radius: 5px;
+    -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    font-size: 11px;
+    font-size: 20px;
     float: left;
     overflow: hidden;
+    font-family: monaco, courier, helvetica;
 }
 
-.col1 { width: 380px; }
-/*.col2 { width: 180px; }
+.col1 { width: 80px; }
+.col2 { width: 380px; }
 .col3 { width: 280px; }
-.col4 { width: 380px; }
+.col4 { width: 780px; }
 .col5 { width: 480px; }
-*/
+
 .col1 img { max-width: 80px; }
 .col2 img { max-width: 180px; }
 .col3 img { max-width: 280px; }
 .col4 img { max-width: 380px; }
-.col5 img { max-width: 480px; }
+.col5 img { max-width: 580px; }
