@@ -5,7 +5,7 @@
 
 body { 
     margin: 0; 
-    font: 20px 'Helvetica Neue', Arial, sans-serif;
+    font: 10px 'Helvetica Neue', Arial, sans-serif;
     padding: 20px;
     color: #222;
 }
@@ -21,7 +21,7 @@ body {
 	  -moz-border-radius: 5px;
 	  -webkit-border-radius: 5px;
 	  border-radius: 5px;
-	  width: 21450px;
+	  width: 1000px;
 }
 
 .wrap:after {
@@ -44,16 +44,16 @@ body {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 10px;
     float: left;
     overflow: hidden;
     font-family: monaco, courier, helvetica;
 }
 
 .col1 { width: 80px; }
-.col2 { width: 380px; }
+.col2 { width: 180px; }
 .col3 { width: 280px; }
-.col4 { width: 780px; }
+.col4 { width: 380px; }
 .col5 { width: 480px; }
 
 .col1 img { max-width: 80px; }
